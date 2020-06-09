@@ -35,12 +35,14 @@ Please cite this work when using any of the presented methods or code.
 
 
 ## How To Reproduce Figures
-The following list points to the analysis scripts that generate the results and figures of the publication:
+Please download the data here and change the path to data and scripts in ../tCCA/settings.py and run this script in the beginning. Then run the following scripts to generate the results and figures from the publication.
 - Figure 2A: .../tCCA/fig2A_hrf_comp.m
 - Figure 2B: .../tCCA/run_CCA.m
+  - This script will open 84 figures of Estimated HRFand corresponding statistics obtained usingGLM with tCCA.
 - Figure 6: .../tCCA/eval_and_plot_CVresults.m
 - Figure 7: .../tCCA/eval_and_plot_invAUXresults.m
 - Figure 8: .../power analysis/run_power.m  
+  - - This script will open 84 figures.
 - Figure 9: .../tCCA/eval_and_plot_CVresults.m
 - Figure 10: .../tCCA/eval_and_plot_CVresults.m
 - Figure 11: .../block design/results_eval_block.m
