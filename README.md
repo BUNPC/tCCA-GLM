@@ -42,7 +42,7 @@ Please download the data here and change the path to data and scripts in ../tCCA
 - Figure 6: .../tCCA/eval_and_plot_CVresults.m
 - Figure 7: .../tCCA/eval_and_plot_invAUXresults.m
 - Figure 8: .../power analysis/run_power.m  
-  - - This script will open 84 figures.
+  - This script will open 84 figures.
 - Figure 9: .../tCCA/eval_and_plot_CVresults.m
 - Figure 10: .../tCCA/eval_and_plot_CVresults.m
 - Figure 11: .../block design/results_eval_block.m
