@@ -35,16 +35,17 @@ Please cite this work when using any of the presented methods or code.
 
 
 ## How To Reproduce Figures
-Please download the data here and change the path to data and scripts in ../tCCA/settings.py and run this script in the beginning. Then run the following scripts to generate the results and figures from the publication.
-- Figure 2A: .../tCCA/fig2A_hrf_comp.m
+Please download the data here and change the path to data and scripts inside the script ../tCCA/pathsettings.m and run this script in the beginning. Then run the following scripts to generate the results and figures from the publication.
 - Figure 2B: .../tCCA/run_CCA.m
-  - This script will open 84 figures of Estimated HRFand corresponding statistics obtained usingGLM with tCCA.
-- Figure 6: .../tCCA/eval_and_plot_CVresults.m
+  - This script will generate 84 for all the subjects inside the RESTING_DATA folder that was downloaded above.
+- Figure 2A: .../tCCA/fig2A_hrf_comp.m
+  - Please run Figure 2B script before running this.
+- Figure 6,Figure 9, Figure 10, Figure 11 and Figure C1 and C2 : .../tCCA/eval_and_plot_CVresults.m
+  - This will generate 24 figures for all the subjects inside the RESTING_DATA folder that was downloaded above.
 - Figure 7: .../tCCA/eval_and_plot_invAUXresults.m
 - Figure 8: .../power analysis/run_power.m  
-  - This script will open 84 figures.
-- Figure 9: .../tCCA/eval_and_plot_CVresults.m
-- Figure 10: .../tCCA/eval_and_plot_CVresults.m
+  - This script will open 32 figures for all the subjects inside the RESTING_DATA folder that was downloaded above.
 - Figure 11: .../block design/results_eval_block.m
-- Figure C1 and C2: .../tCCA/eval_and_plot_CVresults.m
+  - Need to update input parameters for this script
+
 
