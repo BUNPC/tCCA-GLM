@@ -1,18 +1,18 @@
-clear all;
+% clear all;
 
 % ##### FOLLOWING TWO LINES NEED CHANGE ACCORDING TO USER!
-malexflag = 1;
-if malexflag
-    %Meryem
-    path.code = 'C:\Users\mayucel\Documents\PROJECTS\CODES\tCCA-GLM'; addpath(genpath(path.code)); % code directory
-    path.dir = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\FB_RESTING_DATA'; % data directory
-    path.save = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER'; % save directory
-else
-    %Alex
-    path.code = 'D:\Office\Research\Software - Scripts\Matlab\Regression tCCA GLM\tCCA-GLM'; addpath(genpath(path.code)); % code directory
-    path.dir = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\FB_RESTING_DATA'; % data directory
-    path.save = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER'; % save directory
-end
+% malexflag = 1;
+% if malexflag
+%     %Meryem
+%     path.code = 'C:\Users\mayucel\Documents\PROJECTS\CODES\tCCA-GLM'; addpath(genpath(path.code)); % code directory
+%     path.dir = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\FB_RESTING_DATA'; % data directory
+%     path.save = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER'; % save directory
+% else
+%     %Alex
+%     path.code = 'D:\Office\Research\Software - Scripts\Matlab\Regression tCCA GLM\tCCA-GLM'; addpath(genpath(path.code)); % code directory
+%     path.dir = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\FB_RESTING_DATA'; % data directory
+%     path.save = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER'; % save directory
+% end
 
 % #####
 %% simulated data file names

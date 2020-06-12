@@ -1,4 +1,4 @@
-clear all
+% clear all
 
 %% +++++++++++++++++++++++
 %% SCRIPT CONFIGURATION
@@ -66,39 +66,47 @@ sclims = {[-0.2 1], [-0.2 1]; [0 8]*1e-6, [0 4]*1e-6; [0 1], [0 1]};
 % pOpt = [5 2 3];
 
 %% get colormaps
-cmap_hbo= flipud(othercolor('YlOrRd9'));
-cmap_hbr= flipud(othercolor('YlGnBu9'));
+% cmap_hbo= flipud(othercolor('YlOrRd9'));
+% cmap_hbr= flipud(othercolor('YlGnBu9'));
 cmap_obj= flipud(jet);
 
 %% Data
 % ##### FOLLOWING TWO LINES NEED CHANGE ACCORDING TO USER!
-if melexflag
-    %Meryem
-    path.code = 'C:\Users\mayucel\Documents\PROJECTS\CODES\tCCA-GLM'; addpath(genpath(path.code)); % code directory
-    path.dir = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\FB_RESTING_DATA'; % data directory
-    path.save = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER'; % save directory
-    path.cvres20 = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\CV_results_data_20'; % save directory
-    path.cvres50 = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\CV_results_data_50'; % save directory
-    path.cvres100 = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\CV_results_data_100'; % save directory
-    path.cvres20stmse = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\CV_results_data_20_stMSE'; % save directory
-    path.cvres50stmse = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\CV_results_data_50_stMSE'; % save directory
-    path.cvres100stmse = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\CV_results_data_100_stMSE'; % save directory
-    path.savefig1 = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\FIGURES\Fig 7-9 contour plots';
-    path.savefig2 = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\FIGURES\Fig 13 & 14 Scatter and ROC';
-else
-    %Alex
-    path.code = 'D:\Office\Research\Software - Scripts\Matlab\Regression tCCA GLM\tCCA-GLM'; addpath(genpath(path.code)); % code directory
-    path.dir = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\FB_RESTING_DATA'; % data directory
-    path.save = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER'; % save directory
-    path.cvres20 = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\CV_results_data_20'; % save directory
-    path.cvres50 = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\CV_results_data_50'; % save directory
-    path.cvres100 = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\CV_results_data_100'; % save directory
-    path.cvres20stmse = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\CV_results_data_20_stMSE'; % save directory
-    path.cvres50stmse = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\CV_results_data_50_stMSE'; % save directory
-    path.cvres100stmse = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\CV_results_data_100_stMSE'; % save directory
-    path.savefig1 = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\FIGURES\Fig 7-9 contour plots';
-    path.savefig2 = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\FIGURES\Fig 13 & 14 Scatter and ROC';
-end
+path.cvres20 = 'CV_results_data_20'; % save directory
+path.cvres50 = 'CV_results_data_50'; % save directory
+path.cvres100 = 'CV_results_data_100'; % save directory
+path.cvres20stmse = 'CV_results_data_20_stMSE'; % save directory
+path.cvres50stmse = 'CV_results_data_50_stMSE'; % save directory
+path.cvres100stmse = 'CV_results_data_100_stMSE'; % save directory
+path.savefig1 = 'Fig 7-9 contour plots';
+path.savefig2 = 'Fig 13 & 14 Scatter and ROC';
+% if melexflag
+%     %Meryem
+%     path.code = 'C:\Users\mayucel\Documents\PROJECTS\CODES\tCCA-GLM'; addpath(genpath(path.code)); % code directory
+%     path.dir = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\FB_RESTING_DATA'; % data directory
+%     path.save = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER'; % save directory
+%     path.cvres20 = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\CV_results_data_20'; % save directory
+%     path.cvres50 = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\CV_results_data_50'; % save directory
+%     path.cvres100 = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\CV_results_data_100'; % save directory
+%     path.cvres20stmse = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\CV_results_data_20_stMSE'; % save directory
+%     path.cvres50stmse = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\CV_results_data_50_stMSE'; % save directory
+%     path.cvres100stmse = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\CV_results_data_100_stMSE'; % save directory
+%     path.savefig1 = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\FIGURES\Fig 7-9 contour plots';
+%     path.savefig2 = 'C:\Users\mayucel\Google Drive\tCCA_GLM_PAPER\FIGURES\Fig 13 & 14 Scatter and ROC';
+% else
+%     %Alex
+%     path.code = 'D:\Office\Research\Software - Scripts\Matlab\Regression tCCA GLM\tCCA-GLM'; addpath(genpath(path.code)); % code directory
+%     path.dir = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\FB_RESTING_DATA'; % data directory
+%     path.save = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER'; % save directory
+%     path.cvres20 = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\CV_results_data_20'; % save directory
+%     path.cvres50 = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\CV_results_data_50'; % save directory
+%     path.cvres100 = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\CV_results_data_100'; % save directory
+%     path.cvres20stmse = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\CV_results_data_20_stMSE'; % save directory
+%     path.cvres50stmse = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\CV_results_data_50_stMSE'; % save directory
+%     path.cvres100stmse = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\CV_results_data_100_stMSE'; % save directory
+%     path.savefig1 = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\FIGURES\Fig 7-9 contour plots';
+%     path.savefig2 = 'C:\Users\avolu\Google Drive\tCCA_GLM_PAPER\FIGURES\Fig 13 & 14 Scatter and ROC';
+% end
 
 % #####
 filename = 'resting_sim';
